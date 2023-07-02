@@ -10,7 +10,7 @@ const Header = () => {
     <header className='py-6 mb-12 border-b'>
       <div className='container mx-auto flex justify-between items-center'>
         <Link to='/'>
-          <img src={Logo} alt='' />
+        <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-dark">Roberto Silveira</span>
         </Link>
         <div className='flex items-center gap-6'>
           <Link className='hover:text-violet-900 transition' to='/'>
