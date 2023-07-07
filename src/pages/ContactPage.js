@@ -11,9 +11,11 @@ const ContactPage = () => {
             <span className='text-violet-700'>Entra</span> em contato com a gente
           </h4>
           <p className='max-w-[70%] mb-8'>
-            Estamos aqui para ajudar! Se você tiver alguma dúvida ou precisar de mais informações sobre nossos serviços ou imóveis disponíveis, por favor, entre em contato. Estamos prontos para atendê-lo e responder às suas perguntas. Aguardamos ansiosamente o seu contato!
-            <span className='text-violet-700'> Equipe de Vendas da Roberto Silveira </span>
+            Estamos aqui para ajudar! Se você tiver alguma dúvida ou precisar de mais informações sobre nossos serviços
+            ou imóveis disponíveis, por favor, entre em contato. Estamos prontos para atendê-lo e responder às suas perguntas.
+            Aguardamos ansiosamente o seu contato! 
           </p>
+          <p className='text-violet-700 pb-2'> Equipe de Vendas da Roberto Silveira </p>
           <Contact />
         </div>
         </div>

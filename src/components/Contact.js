@@ -41,10 +41,7 @@ const Contact = () => {
             className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
             type='submit'
             >
-            Send message
-            </button>
-            <button className='border border-violet-700 text-violet-700 hover:border-purple-600 hover:text-purple-600 rounded p-4 text-sm w-full transition'>
-            Call
+              Send message
             </button>
         </div>
       </form>
