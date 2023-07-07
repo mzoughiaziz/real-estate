@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-gray-500 text-center dark:text-gray-400"> Todos Os Direitos Reservados 2023
-        <p><a href="https://tanitsolutions.com/" className="hover:text-white"> © Tanit Solution™</a></p></span>
+        <p className="tanitsolution"><a href="https://tanitsolutions.com/" target='_blank' > © Tanit Solution™</a></p></span>
     </div>
   </footer>
   );

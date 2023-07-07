@@ -441,4 +441,7 @@
     transform: scale(1) translate(50%, -50%);
     transform-origin: 100% 0%;
   }
+  .tanitsolution:hover  {
+    color : #6D28D9
+  }
   
