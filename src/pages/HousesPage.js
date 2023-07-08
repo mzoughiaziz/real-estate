@@ -19,7 +19,7 @@ const HousesPage = () => {
   if (houses.length < 1) {
     return (
       <div className='text-center text-3xl text-gray-400 mt-48'>
-        Sorry, nothing was found.
+        Desculpe, nada foi encontrado.
       </div>
     );
   }

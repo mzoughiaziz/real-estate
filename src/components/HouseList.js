@@ -20,7 +20,7 @@ const HouseList = () => {
   if (houses.length < 1) {
     return (
       <div className='text-center text-3xl text-gray-400 mt-48'>
-        Sorry, nothing was found.
+        Desculpe, nada foi encontrado.
       </div>
     );
   }
@@ -40,7 +40,7 @@ const HouseList = () => {
         {visibleHouses < houses.length && (
           <div className='text-center mt-6'>
             <button
-              className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'
+              className='bg-orangers hover:orange-300 text-white font-bold py-2 px-4 rounded'
               onClick={loadMoreHouses}
             >
               Mostrar mais
