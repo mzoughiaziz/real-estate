@@ -9,9 +9,9 @@ export const HouseContext = createContext();
 // provider
 const HouseContextProvider = ({ children }) => {
   const [houses, setHouses] = useState(housesData);
-  const [country, setCountry] = useState('Localização (tudo)');
+  const [country, setCountry] = useState('Location (any)');
   const [countries, setCountries] = useState([]);
-  const [property, setProperty] = useState('Tipo do imóvel (tudo)');
+  const [property, setProperty] = useState('Property type (any)');
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState('Price range (any)');
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,7 @@ const HouseContextProvider = ({ children }) => {
     });
 
     // remove duplicates
-    const uniqueCountries = ['Localização (tudo)', ...new Set(allCountries)];
+    const uniqueCountries = ['Location (any)', ...new Set(allCountries)];
 
     // set countries state
     setCountries(uniqueCountries);
@@ -36,7 +36,7 @@ const HouseContextProvider = ({ children }) => {
     });
 
     // remove duplicates
-    const uniqueProperties = ['Tipo do imóvel (tudo)', ...new Set(allProperties)];
+    const uniqueProperties = ['Property type (any)', ...new Set(allProperties)];
 
     // set countries state
     setProperties(uniqueProperties);
