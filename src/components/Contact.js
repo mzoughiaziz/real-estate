@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='flex-1 w-9/12 mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
+    <div className='flex-1 w-full mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
       {localSuccess && 
           <p className='text-green-700 pb-2'> Email enviado com sucesso </p>
         }
