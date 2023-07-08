@@ -23,7 +23,7 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data.success == true){
+        if(data.success === true){
           setFormData({
             name: '',
             email: '',
