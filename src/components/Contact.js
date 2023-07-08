@@ -14,7 +14,7 @@ const Contact = () => {
     event.preventDefault();
     
     // Make an HTTP request to your API with the form data
-    fetch('https://real-estate-api-eta.vercel.app/api/contact', {
+    fetch('https://realestateapi-psi.vercel.app/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
