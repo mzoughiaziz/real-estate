@@ -37,7 +37,7 @@ const House = ({ house }) => {
         </div>
       </div>
       <div className='text-lg font-semibold text-violet-600 mb-4'>
-        $ {house.price}
+        R$ {house.price}
       </div>
     </div>
   );

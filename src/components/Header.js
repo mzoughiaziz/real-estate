@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react'
-//import { ReactComponent as Hamburger } from '../assets/icons/hamburger.svg'
 import "./header.css"
 import { NavLink } from 'react-router-dom'
+import Logo from '../assets/img/logo-header.png';
 
 // import link
 import { Link } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Header = () => {
           height="4"
           rx="2"
           transform="translate(304 47)"
-          fill="#574c4c"
+          fill="#f16e1d"
         />
         <rect
           id="Rectangle_5"
@@ -34,7 +34,7 @@ const Header = () => {
           height="4"
           rx="2"
           transform="translate(304 67)"
-          fill="#574c4c"
+          fill="#f16e1d"
         />
         <rect
           id="Rectangle_4"
@@ -43,7 +43,7 @@ const Header = () => {
           height="4"
           rx="2"
           transform="translate(294 57)"
-          fill="#574c4c"
+          fill="#f16e1d"
         />
       </g>
     </svg>
@@ -57,7 +57,9 @@ const Header = () => {
       <nav className='navbar z-10'>
         <div className='container'>
           <Link to='/'>
-              <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-dark">Roberto Silveira</span>
+              <span className="self-center">
+                <img src={Logo} width={'270px'}></img>
+              </span>
           </Link>
           <div className="menu-icon" onClick={handleShowNavbar}>
             <Hamburger />

@@ -18,7 +18,7 @@ const CountryDropdown = () => {
         <RiMapPinLine className='dropdown-icon-primary' />
         <div>
           <div className='text-[15px] font-medium leading-tight'>{country}</div>
-          <div className='text-[13px]'>Select your place</div>
+          <div className='text-[13px]'>Selecionar</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className='dropdown-icon-secondary' />
@@ -34,7 +34,7 @@ const CountryDropdown = () => {
               as='li'
               onClick={() => setCountry(country)}
               key={index}
-              className='cursor-pointer hover:text-violet-700 transition'
+              className='cursor-pointer hover:text-orangers transition'
             >
               {country}
             </Menu.Item>

@@ -20,6 +20,10 @@ module.exports = {
       colors: {
         primary: '#101828',
         secondary: '#7F56D9',
+        orangers : '#f16e1d',
+        bluers : '#002337',
+        blueskyrs : '#4085ad',
+        greenrs : '#3e523a'
       },
       boxShadow: {
         1: '0px 4px 30px rgba(0, 0, 0, 0.08)',

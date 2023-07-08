@@ -50,6 +50,7 @@ const Contact = () => {
 
   return (
     <div className='flex-1 w-9/12 mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
+<<<<<<< Updated upstream
       {localSuccess && 
           <p className='text-green-700 pb-2'> Mail sent succeffully </p>
         }
@@ -99,6 +100,48 @@ const Contact = () => {
           >
             Send message
           </button>
+=======
+        {/* <div className='flex items-center gap-x-4 mb-8'>
+        <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
+            <img src={property.agent.image}></img>
+        </div>
+      <div>
+            <div className='font-bold text-lg'>{property.agent.name}</div>
+            <Link to='' className='text-orangers text-sm'>
+            View listings
+            </Link>
+        </div>
+      </div> */}
+      <form className='flex flex-col gap-y-4'>
+        <input
+            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
+            type='text'
+            placeholder='Nome'
+        />
+        <input
+            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
+            type='text'
+            placeholder='Email'
+        />
+        <input
+            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
+            type='text'
+            placeholder='Celular'
+        />
+        <textarea
+            className='border border-gray-300 focus:border-orangers rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
+            type='text'
+            placeholder='Message*'
+            defaultValue='Olá, estou interessado em [Apartamento moderno]'
+        />
+        <div className='flex gap-x-2'>
+            <button
+            className='bg-orangers hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
+            type='submit'
+            >
+              Enviar mensagem 
+            </button>
+>>>>>>> Stashed changes
         </div>
       </form>
     </div>

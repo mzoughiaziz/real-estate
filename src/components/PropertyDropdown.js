@@ -20,7 +20,7 @@ const PropertyDropdown = () => {
           <div className='text-[15px] font-medium leading-tight'>
             {property}
           </div>
-          <div className='text-[13px]'>Choose property type</div>
+          <div className='text-[13px]'>Selecionar</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className='dropdown-icon-secondary' />
@@ -36,7 +36,7 @@ const PropertyDropdown = () => {
               as='li'
               onClick={() => setProperty(property)}
               key={index}
-              className='cursor-pointer hover:text-violet-700 transition'
+              className='cursor-pointer hover:text-orangers transition'
             >
               {property}
             </Menu.Item>

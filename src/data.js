@@ -57,8 +57,8 @@ import Agent12 from './assets/img/agents/agent12.png';
 export const housesData = [
   {
     id: 1,
-    type: 'House',
-    name: 'House 1',
+    type: 'Casa',
+    name: 'Casa 1',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House1,
@@ -78,8 +78,8 @@ export const housesData = [
   },
   {
     id: 2,
-    type: 'House',
-    name: 'House 2',
+    type: 'Casa',
+    name: 'Casa 2',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House2,
@@ -99,8 +99,8 @@ export const housesData = [
   },
   {
     id: 3,
-    type: 'House',
-    name: 'House 3',
+    type: 'Casa',
+    name: 'Casa 3',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House3,
@@ -120,8 +120,8 @@ export const housesData = [
   },
   {
     id: 4,
-    type: 'House',
-    name: 'House 4',
+    type: 'Casa',
+    name: 'Casa 4',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House4,
@@ -141,8 +141,8 @@ export const housesData = [
   },
   {
     id: 5,
-    type: 'House',
-    name: 'House 5',
+    type: 'Casa',
+    name: 'Casa 5',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House5,
@@ -162,8 +162,8 @@ export const housesData = [
   },
   {
     id: 6,
-    type: 'House',
-    name: 'House 6',
+    type: 'Casa',
+    name: 'Casa 6',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House6,
@@ -183,7 +183,7 @@ export const housesData = [
   },
   {
     id: 7,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 1',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -204,7 +204,7 @@ export const housesData = [
   },
   {
     id: 8,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 2',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -225,7 +225,7 @@ export const housesData = [
   },
   {
     id: 9,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 3',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -246,8 +246,8 @@ export const housesData = [
   },
   {
     id: 10,
-    type: 'House',
-    name: 'House 7',
+    type: 'Casa',
+    name: 'Casa 7',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House7,
@@ -267,8 +267,8 @@ export const housesData = [
   },
   {
     id: 11,
-    type: 'House',
-    name: 'House 8',
+    type: 'Casa',
+    name: 'Casa 8',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House8,
@@ -288,8 +288,8 @@ export const housesData = [
   },
   {
     id: 12,
-    type: 'House',
-    name: 'House 9',
+    type: 'Casa',
+    name: 'Casa 9',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House9,
@@ -309,8 +309,8 @@ export const housesData = [
   },
   {
     id: 13,
-    type: 'House',
-    name: 'House 10',
+    type: 'Casa',
+    name: 'Casa 10',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House10,
@@ -330,8 +330,8 @@ export const housesData = [
   },
   {
     id: 14,
-    type: 'House',
-    name: 'House 11',
+    type: 'Casa',
+    name: 'Casa 11',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House11,
@@ -351,8 +351,8 @@ export const housesData = [
   },
   {
     id: 15,
-    type: 'House',
-    name: 'House 12',
+    type: 'Casa',
+    name: 'Casa 12',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: House12,
@@ -372,7 +372,7 @@ export const housesData = [
   },
   {
     id: 16,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 16',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -393,7 +393,7 @@ export const housesData = [
   },
   {
     id: 17,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 17',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -414,7 +414,7 @@ export const housesData = [
   },
   {
     id: 18,
-    type: 'Apartament',
+    type: 'Apartamento',
     name: 'Apartament 18',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',

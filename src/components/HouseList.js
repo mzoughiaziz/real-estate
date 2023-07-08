@@ -13,7 +13,7 @@ const HouseList = () => {
 
   if (loading) {
     return (
-      <ImSpinner2 className='mx-auto animate-spin text-violet-700 text-4xl mt-[200px]' />
+      <ImSpinner2 className='mx-auto animate-spin text-orangers text-4xl mt-[200px]' />
     );
   }
 

@@ -5,9 +5,7 @@ import { housesData } from '../data';
 //  useParams
 import { useParams } from 'react-router-dom';
 // import icons
-import { BiBed, BiBath, BiArea, BiPhone } from 'react-icons/bi';
-// import link
-import { Link } from 'react-router-dom';
+import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 import Contact from '../components/Contact';
 
 const PropertyDetails = () => {
@@ -32,7 +30,7 @@ const PropertyDetails = () => {
           </div>
         </div>
         <div className='text-3xl font-semibold text-violet-600'>
-          $ {property.price}
+          R$ {property.price}
         </div>
       </div>
       <div className='flex flex-col items-start gap-8 lg:flex-row'>
@@ -40,7 +38,7 @@ const PropertyDetails = () => {
           <div className='mb-8'>
             <img src={property.imageLg} alt='' />
           </div>
-          <div className='flex gap-x-6 text-violet-700 mb-6'>
+          <div className='flex gap-x-6 text-orangers mb-6'>
             <div className='flex gap-x-2 items-center'>
               <BiBed className='text-2xl' />
               <div className='text-lg font-medium'>{property.bedrooms}</div>
