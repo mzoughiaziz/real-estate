@@ -25,8 +25,8 @@ const App = () => {
       </Routes>
       <Footer />
       <FloatingWhatsApp
-        phoneNumber="123456789"
-        accountName="Foo"
+        phoneNumber="+553499860-7766"
+        accountName="Juliene"
         allowEsc
         allowClickAway
         notification
