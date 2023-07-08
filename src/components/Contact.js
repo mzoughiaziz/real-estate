@@ -5,7 +5,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    message: 'Olá, estou interessado em [Apartamento moderno]',
+    message: '',
   });
   const [localSuccess, setLocalSuccess] = useState(false);
   const [localError, setLocalError] = useState(false);
@@ -85,9 +85,9 @@ const Contact = () => {
           required
         />
         <textarea
-          className='border border-gray-300 focus:border-orangers rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
+          className='border border-gray-300 focus:border-orangers rounded w-full p-4 h-36 text-sm outline-none resize-none'
           name='message'
-          placeholder='Mensagem'
+          placeholder='Olá, estou interessado em [Apartamento moderno]'
           value={formData.message}
           onChange={handleChange}
           required
