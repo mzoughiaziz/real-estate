@@ -5,7 +5,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    message: 'Hello, I am interested in [Modern apartment]',
+    message: 'Olá, estou interessado em [Apartamento moderno]',
   });
   const [localSuccess, setLocalSuccess] = useState(false);
   const [localError, setLocalError] = useState(false);
@@ -28,7 +28,7 @@ const Contact = () => {
             name: '',
             email: '',
             phone: '',
-            message: 'Hello, I am interested in [Modern apartment]',
+            message: 'Olá, estou interessado em [Apartamento moderno]',
           })
           setLocalSuccess(true)
         }else{
@@ -50,98 +50,55 @@ const Contact = () => {
 
   return (
     <div className='flex-1 w-9/12 mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
-<<<<<<< Updated upstream
       {localSuccess && 
-          <p className='text-green-700 pb-2'> Mail sent succeffully </p>
+          <p className='text-green-700 pb-2'> Email enviado com sucesso </p>
         }
           {localError && 
-          <p className='text-red-700 pb-2'> Error sending email </p>
+          <p className='text-red-700 pb-2'> Erro ao enviar e-mail </p>
           }
       <form className='flex flex-col gap-y-4' onSubmit={handleSubmit}>
         <input
-          className='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+          className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
           type='text'
           name='name'
-          placeholder='Name*'
+          placeholder='Nome'
           value={formData.name}
           onChange={handleChange}
           required
         />
         <input
-          className='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+          className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
           type='email'
           name='email'
-          placeholder='Email*'
+          placeholder='Email'
           value={formData.email}
           onChange={handleChange}
           required
         />
         <input
-          className='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+          className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
           type='tel'
           name='phone'
-          placeholder='Phone*'
+          placeholder='Celular'
           value={formData.phone}
           onChange={handleChange}
           required
         />
         <textarea
-          className='border border-gray-300 focus:border-violet-700 rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
+          className='border border-gray-300 focus:border-orangers rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
           name='message'
-          placeholder='Message*'
+          placeholder='Mensagem'
           value={formData.message}
           onChange={handleChange}
           required
         />
         <div className='flex gap-x-2'>
           <button
-            className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
+            className='bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm w-full transition'
             type='submit'
           >
-            Send message
+            Enviar mensagem
           </button>
-=======
-        {/* <div className='flex items-center gap-x-4 mb-8'>
-        <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
-            <img src={property.agent.image}></img>
-        </div>
-      <div>
-            <div className='font-bold text-lg'>{property.agent.name}</div>
-            <Link to='' className='text-orangers text-sm'>
-            View listings
-            </Link>
-        </div>
-      </div> */}
-      <form className='flex flex-col gap-y-4'>
-        <input
-            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
-            type='text'
-            placeholder='Nome'
-        />
-        <input
-            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
-            type='text'
-            placeholder='Email'
-        />
-        <input
-            className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
-            type='text'
-            placeholder='Celular'
-        />
-        <textarea
-            className='border border-gray-300 focus:border-orangers rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
-            type='text'
-            placeholder='Message*'
-            defaultValue='Olá, estou interessado em [Apartamento moderno]'
-        />
-        <div className='flex gap-x-2'>
-            <button
-            className='bg-orangers hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
-            type='submit'
-            >
-              Enviar mensagem 
-            </button>
->>>>>>> Stashed changes
         </div>
       </form>
     </div>
