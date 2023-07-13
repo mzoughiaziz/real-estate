@@ -25,13 +25,13 @@ const PropertyDetails = () => {
           <div className='bg-green-500 rounded-full text-white px-3 inline-block'>
             {property.type}
           </div>
-          <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
+          <div className='bg-orangers rounded-full text-white px-3 inline-block'>
             {property.country}
           </div>
         </div>
-        <div className='text-3xl font-semibold text-violet-600'>
-          R$ {property.price}
-        </div>
+        {/* <div className='text-3xl font-semibold text-violet-600'>
+          Em construção
+        </div> */}
       </div>
       <div className='flex flex-col items-start gap-8 lg:flex-row'>
         <div className='max-w-[768px]'>
