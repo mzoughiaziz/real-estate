@@ -12,15 +12,19 @@ const HousesPage = () => {
 
   if (loading) {
     return (
-      <ImSpinner2 className='mx-auto animate-spin text-orangers text-4xl mt-[200px]' />
+      <ImSpinner2 className='mx-auto animate-spin text-orangers text-4xl mt-[200px]' style={{minHeight: '500px'}}/>
     );
   }
 
   if (houses.length < 1) {
     return (
+      <>
+      <Search />
       <div className='text-center text-3xl text-gray-400 mt-48'>
         Desculpe, nada foi encontrado.
       </div>
+      </>
+      
     );
   }
   return (
