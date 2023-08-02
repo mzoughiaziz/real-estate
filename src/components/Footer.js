@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between place-content-center pt-2">
             <Link to='/' className='flex items-center mb-4 sm:mb-0'>
               <span className="self-center">
-                <img src={LogoFooter} width={'270'}></img>
+                <img src={LogoFooter} width={'270'} alt='Logo footer'></img>
               </span>
             </Link>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -21,7 +21,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className='mr-4 hover:text-orangers md:mr-6' to='/imoveis'>
+                  <Link className='mr-4 hover:text-orangers md:mr-6' to='/projetos-disponiveis'>
                     Imóveis
                   </Link>
                 </li>

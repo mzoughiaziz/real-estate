@@ -8,7 +8,38 @@ import Logo from '../assets/img/logo-header.png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
+  const handleMenuOne = () => {
+    // do something
+    setOpen(false);
+  };
+
+  const handleMenuTwo = () => {
+    // do something
+    setOpen(false);
+  };
   const [showNavbar, setShowNavbar] = useState(false)
+
+  
+  const Dropdown = ({ open, trigger, menu }) => {
+    return (
+      <div className="dropdown">
+        {trigger}
+        {open ? (
+          <ul className="menu">
+            {menu.map((menuItem, index) => (
+              <li key={index} className="menu-item">{menuItem}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    );
+  };
 
   const Hamburger = () => (
     <svg
@@ -65,18 +96,28 @@ const Header = () => {
             <Hamburger />
           </div>
           <div className={`nav-elements ${showNavbar && 'active'}`}>
-            <ul>
+            <ul className='nav-list'>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/" onClick={handleMenuTwo}>Home</NavLink>
               </li>
               <li>
-                <NavLink to="/sobrenos">Sobre nós</NavLink>
+                <NavLink to="/sobrenos" onClick={handleMenuTwo}>Sobre nós</NavLink>
               </li>
               <li>
-                <NavLink to="/imoveis">Imóveis</NavLink>
+                <Dropdown
+                  open={open}
+                  trigger={<button onClick={handleOpen}>Projetos</button>}
+                  menu={[
+                    <NavLink to="/projetos-disponiveis" onClick={handleMenuTwo}>Projetos disponíveis</NavLink>,
+                    <NavLink to="/projeto-personalizado" onClick={handleMenuTwo}>Projeto personalizado</NavLink>,
+                  ]}
+                />
               </li>
               <li>
-                <NavLink to="/contato">Contato</NavLink>
+                <NavLink to="/obras-em-andamento" onClick={handleMenuTwo}>Obras em andamento</NavLink>
+              </li> 
+              <li>
+                <NavLink to="/contato" onClick={handleMenuTwo}>Contato</NavLink>
               </li>
             </ul>
           </div>
