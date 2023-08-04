@@ -108,7 +108,7 @@ const Header = () => {
                   open={open}
                   trigger={<button onClick={handleOpen}>Projetos</button>}
                   menu={[
-                    <NavLink to="/projetos-disponiveis" onClick={handleMenuTwo}>Projetos disponíveis</NavLink>,
+                    <NavLink to="/projetos-disponiveis" onClick={handleMenuTwo}>Plantas disponíveis</NavLink>,
                     <NavLink to="/projeto-personalizado" onClick={handleMenuTwo}>Projeto personalizado</NavLink>,
                   ]}
                 />
