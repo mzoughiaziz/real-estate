@@ -29,7 +29,7 @@ const App = () => {
       <Footer />
       <FloatingWhatsApp
         phoneNumber="+553499860-7766"
-        accountName="Juliene"
+        accountName="Carlos Junior"
         allowEsc
         allowClickAway
         notification
