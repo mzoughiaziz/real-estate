@@ -56,7 +56,7 @@ import Agent12 from './assets/img/agents/agent12.png';
 
 export const housesData = [
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 1,
     type: 'Casa',
     name: 'Casa 1',
@@ -78,7 +78,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Projeto Personalizado',
+    project_type : 'Projeto Personalizado',
     id: 2,
     type: 'Casa',
     name: 'Casa 2',
@@ -100,7 +100,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 3,
     type: 'Casa',
     name: 'Casa 3',
@@ -122,7 +122,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Projeto Personalizado',
+    project_type : 'Projeto Personalizado',
     id: 4,
     type: 'Casa',
     name: 'Casa 4',
@@ -144,7 +144,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 5,
     type: 'Casa',
     name: 'Casa 5',
@@ -166,7 +166,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 6,
     type: 'Casa',
     name: 'Casa 6',
@@ -188,7 +188,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Projeto Personalizado',
+    project_type : 'Projeto Personalizado',
     id: 7,
     type: 'Apartamento',
     name: 'Apartament 1',
@@ -210,7 +210,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 8,
     type: 'Apartamento',
     name: 'Apartament 2',
@@ -232,7 +232,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 9,
     type: 'Apartamento',
     name: 'Apartament 3',
@@ -254,7 +254,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Projeto Personalizado',
+    project_type : 'Projeto Personalizado',
     id: 10,
     type: 'Casa',
     name: 'Casa 7',
@@ -276,7 +276,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 11,
     type: 'Casa',
     name: 'Casa 8',
@@ -298,7 +298,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 12,
     type: 'Casa',
     name: 'Casa 9',
@@ -320,7 +320,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 13,
     type: 'Casa',
     name: 'Casa 10',
@@ -342,7 +342,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 14,
     type: 'Casa',
     name: 'Casa 11',
@@ -364,7 +364,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 15,
     type: 'Casa',
     name: 'Casa 12',
@@ -386,7 +386,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 16,
     type: 'Apartamento',
     name: 'Apartament 16',
@@ -408,7 +408,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 17,
     type: 'Apartamento',
     name: 'Apartament 17',
@@ -430,7 +430,7 @@ export const housesData = [
     },
   },
   {
-    type_2 : 'Plantas disponíveis',
+    project_type : 'Plantas disponíveis',
     id: 18,
     type: 'Apartamento',
     name: 'Apartament 18',

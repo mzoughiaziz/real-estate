@@ -2,6 +2,7 @@ import React from 'react';
 
 import Image from '../assets/img/house-banner.png';
 import Search from '../components/Search';
+import { NavLink } from 'react-router-dom'
 
 const Banner = () => {
   return (
@@ -15,6 +16,18 @@ const Banner = () => {
             Powerful, self-serve product and growth analytics to help you
             convert, engage, and retain more.
           </p>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4'>
+            <button
+              className='bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm w-full transition'
+            >
+              <NavLink to="/projetos-disponiveis">Plantas disponíveis</NavLink>
+            </button>
+            <button
+              className='bg-white-100 hover:bg-orangers text-orangers hover:text-white border border-orangers rounded p-4 text-sm w-full transition'
+            >
+              <NavLink to="/projeto-personalizado">Projeto Personalizado</NavLink>
+            </button>
+          </div>
         </div>
         <div className='hidden flex-1 lg:flex justify-end items-end'>
           <img src={Image} className='rounded-lg' alt='' />
