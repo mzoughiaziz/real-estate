@@ -11,6 +11,8 @@ import ContactPage from './pages/ContactPage';
 import HousesPage from './pages/HousesPage';
 import About from './pages/About';
 import { FloatingWhatsApp } from './components/FloatingWhatsapp';
+import Obras from './components/Obras';
+import ProjectPersonalized from './pages/ProjectPersonalized';
 
 const App = () => {
   return (
@@ -21,8 +23,8 @@ const App = () => {
         <Route path='/property/:id' element={<PropertyDetails />} />
         <Route path='/contato' element={<ContactPage />} />
         <Route path='/projetos-disponiveis' element={<HousesPage />} />
-        <Route path='/projeto-personalizado' element={<HousesPage />} />
-        <Route path='/obras-em-andamento' element={<ContactPage />} />
+        <Route path='/projeto-personalizado' element={<ProjectPersonalized />} />
+        <Route path='/obras-em-andamento' element={<HousesPage />} />
         <Route path='/sobrenos' element={<About />} />
       </Routes>
       <Footer />

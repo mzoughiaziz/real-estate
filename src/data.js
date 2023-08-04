@@ -61,7 +61,7 @@ export const housesData = [
     type: 'Casa',
     name: 'Casa 1',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+      'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
     image: House1,
     imageLg: House1Lg,
     country: 'United States',
@@ -83,7 +83,7 @@ export const housesData = [
     type: 'Casa',
     name: 'Casa 2',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
     image: House2,
     imageLg: House2Lg,
     country: 'Canada',
@@ -105,7 +105,7 @@ export const housesData = [
     type: 'Casa',
     name: 'Casa 3',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
     image: House3,
     imageLg: House3Lg,
     country: 'United States',
@@ -127,7 +127,7 @@ export const housesData = [
     type: 'Casa',
     name: 'Casa 4',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
     image: House4,
     imageLg: House4Lg,
     country: 'Canada',
