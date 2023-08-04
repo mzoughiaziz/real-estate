@@ -11,7 +11,6 @@ import ContactPage from './pages/ContactPage';
 import HousesPage from './pages/HousesPage';
 import About from './pages/About';
 import { FloatingWhatsApp } from './components/FloatingWhatsapp';
-import Obras from './components/Obras';
 import ProjectPersonalized from './pages/ProjectPersonalized';
 
 const App = () => {
