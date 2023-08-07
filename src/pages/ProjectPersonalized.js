@@ -243,13 +243,7 @@ const ProjectPersonalized = () => {
               value={stepData.input6_2}
               onChange={handleInputChange}
             />
-            <RadioInput
-              label="Cozinha e sala de jantar e TV integrados ou separados?"
-              options={["integrados", "separados"]}
-              name="input6_3"
-              value={stepData.input6_3}
-              onChange={handleInputChange}
-            />
+        
           </>
         );
       case 7:
