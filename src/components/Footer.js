@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="md:flex md:items-center md:justify-between mt-0">
           <div className='my-4 text-gray-500 '>
             <p><span className='text-orangers'>E-mail:</span> robertosilveira.co@gmail.com</p>
-            <p><span className='text-orangers'>Telefone:</span> +55 (34) 9860-7766</p>
+            <p><span className='text-orangers'>Telefone:</span> +55 (34) 99860-7766</p>
             {/* <p>Endereço: Rua Stelmar José da Silva Junior, Loteamento Cândida Borges</p> */}
           </div>
           <div className="flex flex-col items-stretch">

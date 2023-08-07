@@ -9,9 +9,9 @@ import { reducer } from "../reducer"
 import { WhatsappSVG, CloseSVG, CheckSVG, SendSVG } from "./Icons"
 import css from "../styles.module.css"
 
-import darkBG from "../assets/bg-chat-title-dark.png"
-import lightBG from "../assets/bg-chat-title-light.png"
-import dummyAvatar from "../assets/uifaces-avatar.jpg"
+import darkBG from "../assets/img/whatsapp/bg-chat-title-dark.png"
+import lightBG from "../assets/img/whatsapp/bg-chat-title-light.png"
+import dummyAvatar from "../assets/img/whatsapp/uifaces-avatar.jpg"
 
 export function FloatingWhatsApp({
   onClick,

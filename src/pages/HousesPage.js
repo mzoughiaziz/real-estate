@@ -29,8 +29,14 @@ const HousesPage = () => {
   }
   return (
     <div>
-      <Search />
-      <HouseList />
+      <h1 className='text-4xl lg:text-[58px] font-semibold leading-none mb-4 text-center'>
+        <span className='text-orangers'>Plantas</span> Disponiveis
+      </h1>
+      <p className='text-center text-xl pb-4'>Escolha o projeto que tem a sua cara e se prepare para viver os melhores dias da sua vida em um lugar só seu</p>
+      <div className='mt-4'>
+        <Search />
+        <HouseList />
+      </div>
     </div>
   );
 };
