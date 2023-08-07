@@ -38,7 +38,7 @@ const RadioInput = ({ label, options, name, value, onChange }) => (
       <div key={option}>
         <input
           className="form-radio border mr-2"
-          style={{ "accent-color": "#F27427" }}
+          style={{ accentColor: "#F27427" }}
           type="radio"
           name={name}
           value={option}
@@ -76,10 +76,30 @@ const ProjectPersonalized = () => {
     }));
   };
 
-  const handleSubmit = () => {
-    // Send formData to server using a POST request
-    // Implement your POST request logic here
-    console.log(formData);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Make an HTTP request to your API with the form data
+    fetch("https://realestateapi-psi.vercel.app/api/project-personalized", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success === true) {
+          console.log(data);
+          // setLocalSuccess(true);
+        } else {
+          console.log(data);
+          // setLocalError(true);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        // setLocalError(true);
+      });
   };
 
   const renderStepInputs = () => {
@@ -255,7 +275,6 @@ const ProjectPersonalized = () => {
               value={stepData.input7_2}
               onChange={handleInputChange}
             />
-         
           </>
         );
       case 8:
@@ -299,76 +318,6 @@ const ProjectPersonalized = () => {
         </p>
         {/* {renderStep()} */}
         <div className="flex-1 w-full mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8">
-          {/* <ol
-            className={`flex items-center w-full p-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base`}
-          >
-            <li
-              className={`flex md:w-full items-center ${
-                currentStep >= 1 ? "text-orange-600 dark:text-orange-500" : ""
-              }`}
-            >
-              {currentStep >= 1 && (
-                <svg
-                  className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#F16E25"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-              )}
-              <span
-                className={`flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500 orange`}
-              >
-                Personal{" "}
-                <span className={`hidden sm:inline-flex sm:ml-2`}>Info</span>
-              </span>
-            </li>
-            <li
-              className={`flex md:w-full items-center ${
-                currentStep >= 2 ? "text-orange-600 dark:text-orange-500" : ""
-              }`}
-            >
-              {currentStep >= 2 && (
-                <svg
-                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#F16E25"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-              )}
-              <span
-                className={`flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500`}
-              >
-                <span className={`mr-2`}>2</span>
-                Account{" "}
-                <span className={`hidden sm:inline-flex sm:ml-2`}>Info</span>
-              </span>
-            </li>
-            <li
-              className={`flex items-center ${
-                currentStep >= 3 ? "text-orange-600 dark:text-orange-500" : ""
-              }`}
-            >
-              {currentStep >= 3 && (
-                <svg
-                  class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#F16E25"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-              )}
-              <span className={`mr-2 `}>3</span>
-              Confirmation
-            </li>
-          </ol> */}
           <form className="flex flex-col gap-y-4">
             {renderStepInputs()}
 
