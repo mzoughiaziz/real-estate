@@ -9,10 +9,10 @@ const House = ({ house }) => {
       <img className='mb-8' src={house.image} alt='' />
       <div className='mb-4 flex gap-x-2 text-sm'>
         <div className='bg-green-500 rounded-full text-white px-3 inline-block'>
-          {house.project_type}
+          {house.type}
         </div>
         <div className='bg-orangers rounded-full text-white px-3 inline-block'>
-          {house.country}
+          {house.project_type}
         </div>
       </div>
       <div className='text-lg font-semibold max-w-[260px]'>{house.address}</div>

@@ -26,7 +26,7 @@ const PropertyDetails = () => {
             {property.type}
           </div>
           <div className='bg-orangers rounded-full text-white px-3 inline-block'>
-            {property.country}
+            {property.project_type}
           </div>
         </div>
         {/* <div className='text-3xl font-semibold text-violet-600'>

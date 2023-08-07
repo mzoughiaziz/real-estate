@@ -12,26 +12,26 @@ import House10 from './assets/img/houses/house10.png';
 import House11 from './assets/img/houses/house11.png';
 import House12 from './assets/img/houses/house12.png';
 // import house large images
-import House1Lg from './assets/img/houses/house1lg.png';
-import House2Lg from './assets/img/houses/house2lg.png';
-import House3Lg from './assets/img/houses/house3lg.png';
-import House4Lg from './assets/img/houses/house4lg.png';
-import House5Lg from './assets/img/houses/house5lg.png';
-import House6Lg from './assets/img/houses/house6lg.png';
-import House7Lg from './assets/img/houses/house7lg.png';
-import House8Lg from './assets/img/houses/house8lg.png';
-import House9Lg from './assets/img/houses/house9lg.png';
-import House10Lg from './assets/img/houses/house10lg.png';
-import House11Lg from './assets/img/houses/house11lg.png';
+import House1Lg from './assets/img/apartments/casa1lg.jpeg';
+import House2Lg from './assets/img/apartments/casa2lg.jpeg';
+import House3Lg from './assets/img/apartments/casa3lg.png';
+import House4Lg from './assets/img/apartments/casa4lg.jpeg';
+import House5Lg from './assets/img/apartments/casa5lg.jpeg';
+import House6Lg from './assets/img/apartments/casa6lg.jpeg';
+import House7Lg from './assets/img/apartments/casa1lg.jpeg';
+import House8Lg from './assets/img/apartments/casa2lg.jpeg';
+import House9Lg from './assets/img/apartments/casa3lg.png';
+import House10Lg from './assets/img/apartments/casa4lg.jpeg';
+import House11Lg from './assets/img/apartments/casa5lg.jpeg';
 import House12Lg from './assets/img/houses/house12lg.png';
 
 // import apartments images
-import Apartment1 from './assets/img/apartments/a1.png';
-import Apartment2 from './assets/img/apartments/a2.png';
-import Apartment3 from './assets/img/apartments/a3.png';
-import Apartment4 from './assets/img/apartments/a4.png';
-import Apartment5 from './assets/img/apartments/a5.png';
-import Apartment6 from './assets/img/apartments/a6.png';
+import Apartment1 from './assets/img/apartments/casa01.png';
+import Apartment2 from './assets/img/apartments/casa02.png';
+import Apartment3 from './assets/img/apartments/casa03.png';
+import Apartment4 from './assets/img/apartments/casa04.png';
+import Apartment5 from './assets/img/apartments/casa05.png';
+import Apartment6 from './assets/img/apartments/casa06.png';
 // import apartments large images
 import Apartment1Lg from './assets/img/apartments/a1lg.png';
 import Apartment2Lg from './assets/img/apartments/a2lg.png';
@@ -56,14 +56,14 @@ import Agent12 from './assets/img/agents/agent12.png';
 
 export const housesData = [
   {
-    project_type : 'Obra em andamento',
+    project_type : 'Plantas disponíveis',
     obra_andamento: true,
     id: 1,
     type: 'Casa',
     name: 'Casa 1',
     description:
       'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
-    image: House1,
+    image: Apartment1,
     imageLg: House1Lg,
     country: 'United States',
     address: 'R. Stelmar José da Silva Junior 44',
@@ -74,14 +74,14 @@ export const housesData = [
     price: '110000',
   },
   {
-    project_type : 'Obra em andamento',
+    project_type : 'Plantas disponíveis',
     obra_andamento: true,
     id: 2,
     type: 'Casa',
     name: 'Casa 2',
     description:
     'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
-    image: House2,
+    image: Apartment2,
     imageLg: House2Lg,
     country: 'Canada',
     address: 'R. Claudio Pascoaline, Beija flor 190',
@@ -99,7 +99,7 @@ export const housesData = [
     name: 'Casa 3',
     description:
     'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
-    image: House3,
+    image: Apartment3,
     imageLg: House3Lg,
     country: 'United States',
     address: '2 Glen Creek St. Alexandria, VA 22304',
@@ -110,14 +110,14 @@ export const housesData = [
     price: '170000',
   },
   {
-    project_type : 'Projeto Personalizado',
+    project_type : 'Plantas disponíveis',
     obra_andamento: false,
     id: 4,
     type: 'Casa',
     name: 'Casa 4',
     description:
     'O projeto foi personalizado de acordo com o que o cliente desejava e foram realizados alguns modelos, pois a cliente queria algumas cores bem especifícas em sua casa, encaixamos e ela amou o resultado e vocês o que acharam, Construímos e projetamos sua casa dos sonhos, quer saber mais? Entre em contato conosco!',
-    image: House4,
+    image: Apartment4,
     imageLg: House4Lg,
     country: 'Canada',
     address: '84 Woodland St. Cocoa, FL 32927',
@@ -135,7 +135,7 @@ export const housesData = [
     name: 'Casa 5',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House5,
+    image: Apartment5,
     imageLg: House5Lg,
     country: 'United States',
     address: '28 Westport Dr. Warminster, PA 18974',
@@ -153,7 +153,7 @@ export const housesData = [
     name: 'Casa 6',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House6,
+    image: Apartment6,
     imageLg: House6Lg,
     country: 'Canada',
     address: '32 Pawnee Street Butte, MT 59701',
@@ -164,7 +164,7 @@ export const housesData = [
     price: '220000',
   },
   {
-    project_type : 'Projeto Personalizado',
+    project_type : 'Plantas disponíveis',
     obra_andamento: false,
     id: 7,
     type: 'Apartamento',
@@ -172,7 +172,7 @@ export const housesData = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: Apartment1,
-    imageLg: Apartment1Lg,
+    imageLg: House1Lg,
     country: 'Canada',
     address: '32 Pawnee Street Butte, MT 59701',
     bedrooms: '2',
@@ -190,7 +190,7 @@ export const housesData = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: Apartment2,
-    imageLg: Apartment2Lg,
+    imageLg: House2Lg,
     country: 'United States',
     address: '28 Westport Dr. Warminster, PA 18974',
     bedrooms: '3',
@@ -208,7 +208,7 @@ export const housesData = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
     image: Apartment3,
-    imageLg: Apartment3Lg,
+    imageLg: House3Lg,
     country: 'United States',
     address: '84 Woodland St. Cocoa, FL 32927',
     bedrooms: '2',
@@ -218,15 +218,15 @@ export const housesData = [
     price: '40000',
   },
   {
-    project_type : 'Projeto Personalizado',
+    project_type : 'Plantas disponíveis',
     obra_andamento: false,
     id: 10,
     type: 'Casa',
     name: 'Casa 7',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House7,
-    imageLg: House7Lg,
+    image: Apartment4,
+    imageLg: House4Lg,
     country: 'Canada',
     address: '7240C Argyle St. Lawndale, CA 90260',
     bedrooms: '5',
@@ -243,8 +243,8 @@ export const housesData = [
     name: 'Casa 8',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House8,
-    imageLg: House8Lg,
+    image: Apartment5,
+    imageLg: House5Lg,
     country: 'Canada',
     address: '798 Talbot St. Bridgewater, NJ 08807',
     bedrooms: '7',
@@ -261,8 +261,8 @@ export const housesData = [
     name: 'Casa 9',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House9,
-    imageLg: House9Lg,
+    image: Apartment6,
+    imageLg: House6Lg,
     country: 'United States',
     address: '2 Glen Creek St. Alexandria, VA 22304',
     bedrooms: '4',
@@ -271,42 +271,42 @@ export const housesData = [
     year: '2015',
     price: '139000',
   },
-  {
-    project_type : 'Plantas disponíveis',
-    obra_andamento: false,
-    id: 13,
-    type: 'Casa',
-    name: 'Casa 10',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House10,
-    imageLg: House10Lg,
-    country: 'Canada',
-    address: '84 Woodland St. Cocoa, FL 32927',
-    bedrooms: '5',
-    bathrooms: '2',
-    surface: '5200 sq ft',
-    year: '2014',
-    price: '180000',
-  },
-  {
-    project_type : 'Plantas disponíveis',
-    obra_andamento: false,
-    id: 14,
-    type: 'Casa',
-    name: 'Casa 11',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-    image: House11,
-    imageLg: House11Lg,
-    country: 'United States',
-    address: '28 Westport Dr. Warminster, PA 18974',
-    bedrooms: '5',
-    bathrooms: '2',
-    surface: '3200 sq ft',
-    year: '2011',
-    price: '213000',
-  },
+  // {
+  //   project_type : 'Plantas disponíveis',
+  //   obra_andamento: false,
+  //   id: 13,
+  //   type: 'Casa',
+  //   name: 'Casa 10',
+  //   description:
+  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+  //   image: House10,
+  //   imageLg: House10Lg,
+  //   country: 'Canada',
+  //   address: '84 Woodland St. Cocoa, FL 32927',
+  //   bedrooms: '5',
+  //   bathrooms: '2',
+  //   surface: '5200 sq ft',
+  //   year: '2014',
+  //   price: '180000',
+  // },
+  // {
+  //   project_type : 'Plantas disponíveis',
+  //   obra_andamento: false,
+  //   id: 14,
+  //   type: 'Casa',
+  //   name: 'Casa 11',
+  //   description:
+  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+  //   image: House11,
+  //   imageLg: House11Lg,
+  //   country: 'United States',
+  //   address: '28 Westport Dr. Warminster, PA 18974',
+  //   bedrooms: '5',
+  //   bathrooms: '2',
+  //   surface: '3200 sq ft',
+  //   year: '2011',
+  //   price: '213000',
+  // },
   // {
   //   project_type : 'Plantas disponíveis',
   //   obra_andamento: false,
