@@ -63,22 +63,35 @@ const ProjectPersonalized = () => {
       case 1:
         return (
           <>
+            <h3 className='font-semibold'>Seus Dados</h3>
+            <p>Nome</p>
             <input
               className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
               type='text'
               name='input1_1'
-              placeholder='Nome'
+              placeholder='Roberto Silveira'
               required
               value={formData.step1.input1_1}
               onChange={handleInputChange}
             />
+            <p>Telefone</p>
             <input
               className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
               type='text'
               name='input1_2'
-              placeholder='Nome'
+              placeholder='+55 34 91234 5678'
               required
               value={formData.step1.input1_2}
+              onChange={handleInputChange}
+            />
+            <p>E-mail</p>
+            <input
+              className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
+              type='text'
+              name='input1_3'
+              placeholder='email@email.com'
+              required
+              value={formData.step1.input1_3}
               onChange={handleInputChange}
             />
           </>
@@ -86,25 +99,17 @@ const ProjectPersonalized = () => {
       case 2:
         return (
           <>
-            <input
-              className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
-              type='email'
-              name='input2_1'
-              placeholder='Email'
-              required
-              value={formData.step2.input2_1}
-              onChange={handleInputChange}
-            />
-            <input
-              className='border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none'
-              type='email'
-              name='input2_2'
-              placeholder='Email'
-              required
-              value={formData.step2.input2_2}
-              onChange={handleInputChange}
-            />
-
+            <h3 className='font-semibold'>Tipo de imóvel desejado</h3>
+            <p>Casa térrea</p>
+            <div className="relative">
+              <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <option>Casa térrea</option>
+                <option>Sobrado</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
           </>
         );
       case 3:
