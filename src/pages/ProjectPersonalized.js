@@ -322,10 +322,10 @@ const ProjectPersonalized = () => {
                 name="Garagem coberta"
                 // placeholder="Roberto Silveira"
                 required
-                value="sim"
+                value="eu já possuo a terra"
                 onChange={handleInputChange}
               />
-              <label></label>
+              <label>eu já possuo a terra</label>
             </div>
             <div>
               <input
@@ -335,10 +335,10 @@ const ProjectPersonalized = () => {
                 name="Garagem coberta"
                 // placeholder="Roberto Silveira"
                 required
-                value="não"
+                value="pretendo comprar a vista ou financiar"
                 onChange={handleInputChange}
               />
-              <label>não</label>
+              <label>pretendo comprar a vista ou financiar</label>
             </div>
 
             <p>A obra será financiada?</p>
