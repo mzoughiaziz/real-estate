@@ -12,10 +12,10 @@ const HouseContextProvider = ({ children }) => {
   const [country, setCountry] = useState("Location (any)");
   const [countries, setCountries] = useState([]);
   const [allRoomsNumber, setallRoomsNumber] = useState([]);
-  const [property, setProperty] = useState("Property type (any)");
+  const [property, setProperty] = useState("tipo de propriedade (qualquer)");
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
-  const [rooms, setRooms] = useState("Rooms number (any)");
+  const [rooms, setRooms] = useState("número de quartos (qualquer)");
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     // return all countries
@@ -29,7 +29,7 @@ const HouseContextProvider = ({ children }) => {
     // remove duplicates
     const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
     const uniqueRoomsNumber = [
-      "Rooms number (any)",
+      "número de quartos (qualquer)",
       ...new Set(allRoomsNumber),
     ];
     // set countries state
@@ -44,7 +44,7 @@ const HouseContextProvider = ({ children }) => {
     });
 
     // remove duplicates
-    const uniqueProperties = ["Property type (any)", ...new Set(allProperties)];
+    const uniqueProperties = ["tipo de propriedade (qualquer)", ...new Set(allProperties)];
 
     // set countries state
     setProperties(uniqueProperties);
@@ -58,7 +58,7 @@ const HouseContextProvider = ({ children }) => {
     };
 
     const selectedRooms =
-      rooms !== "Rooms number (any)" ? parseInt(rooms.split(" ")[0]) : null;
+      rooms !== "número de quartos (qualquer)" ? parseInt(rooms.split(" ")[0]) : null;
 
     const newHouses = housesData.filter((house) => {
       const houseRooms = parseInt(house.bedrooms);
