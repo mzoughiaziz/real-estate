@@ -9,32 +9,37 @@ export const HouseContext = createContext();
 // provider
 const HouseContextProvider = ({ children }) => {
   const [houses, setHouses] = useState(housesData);
-  const [country, setCountry] = useState("Location (any)");
-  const [countries, setCountries] = useState([]);
+  // const [country, setCountry] = useState("Location (any)");
+  // const [countries, setCountries] = useState([]);
   const [allRoomsNumber, setallRoomsNumber] = useState([]);
+  const [bathRoomsNumber, setbathRoomsNumber] = useState([]);
+
   const [property, setProperty] = useState("tipo de propriedade (qualquer)");
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
   const [rooms, setRooms] = useState("número de quartos (qualquer)");
+  const [bathrooms, setBathrooms] = useState("quantidade banheiros (qualquer)");
+
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    // return all countries
-    const allCountries = houses.map((house) => {
-      return house.country;
-    });
-
     const allRoomsNumber = houses.map((house) => {
       return house.bedrooms;
     });
-    // remove duplicates
-    const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
     const uniqueRoomsNumber = [
       "número de quartos (qualquer)",
       ...new Set(allRoomsNumber),
     ];
-    // set countries state
-    setCountries(uniqueCountries);
-    setallRoomsNumber(uniqueRoomsNumber);
+    setallRoomsNumber(uniqueRoomsNumber.sort());
+  }, []);
+  useEffect(() => {
+    const bathRoomsNumber = houses.map((house) => {
+      return house.bathrooms;
+    });
+    const uniqueBathRoomsNumber = [
+      "quantidade banheiros (qualquer)",
+      ...new Set(bathRoomsNumber),
+    ];
+    setbathRoomsNumber(uniqueBathRoomsNumber.sort());
   }, []);
 
   useEffect(() => {
@@ -54,51 +59,54 @@ const HouseContextProvider = ({ children }) => {
     setLoading(true);
     // check the string if includes '(any)'
     const isDefault = (str) => {
-      return str.split(" ").includes("(any)");
+      return str.split(" ").includes("(qualquer)");
     };
 
     const selectedRooms =
       rooms !== "número de quartos (qualquer)" ? parseInt(rooms.split(" ")[0]) : null;
+      const selectedBathRooms =
+      rooms !== "quantidade banheiros (qualquer)" ? parseInt(rooms.split(" ")[0]) : null;
 
     const newHouses = housesData.filter((house) => {
-      const houseRooms = parseInt(house.bedrooms);
+      // const houseRooms = parseInt(house.bedrooms);
 
       // all values are selected
       if (
-        house.country === country &&
+        // house.country === country &&
         house.type === property &&
-        house.bedrooms == selectedRooms
+        house.bedrooms == selectedRooms &&
+        house.bathrooms == selectedBathRooms
       ) {
         return house;
       }
       // all values are default
-      if (isDefault(country) && isDefault(property) && isDefault(rooms)) {
+      if (isDefault(bathrooms) && isDefault(property) && isDefault(rooms)) {
         return house;
       }
-      // country is not default
-      if (!isDefault(country) && isDefault(property) && isDefault(rooms)) {
-        return house.country === country;
+      // bathrooms is not default
+      if (!isDefault(bathrooms) && isDefault(property) && isDefault(rooms)) {
+        return house.bathrooms === bathrooms;
       }
       // property is not default
-      if (!isDefault(property) && isDefault(country) && isDefault(rooms)) {
+      if (!isDefault(property) && isDefault(bathrooms) && isDefault(rooms)) {
         return house.type === property;
       }
 
       // rooms is not default
-      if (!isDefault(rooms) && isDefault(country) && isDefault(property)) {
+      if (!isDefault(rooms) && isDefault(bathrooms) && isDefault(property)) {
         return house.bedrooms == selectedRooms;
       }
 
-      // country and property is not default
-      if (!isDefault(country) && !isDefault(property) && isDefault(rooms)) {
-        return house.country === country && house.type === property;
+      // bathrooms and property is not default
+      if (!isDefault(bathrooms) && !isDefault(property) && isDefault(rooms)) {
+        return house.bathrooms === bathrooms && house.type === property;
       }
-      // country and rooms is not default
-      if (!isDefault(country) && isDefault(property) && !isDefault(rooms)) {
-        return house.country === country && house.bedrooms == selectedRooms;
+      // bathrooms and rooms is not default
+      if (!isDefault(bathrooms) && isDefault(property) && !isDefault(rooms)) {
+        return house.bathrooms === bathrooms && house.bedrooms == selectedRooms;
       }
       // property and rooms is not default
-      if (isDefault(country) && !isDefault(property) && !isDefault(rooms)) {
+      if (isDefault(bathrooms) && !isDefault(property) && !isDefault(rooms)) {
         return house.type === property && house.bedrooms == selectedRooms;
       }
     });
@@ -113,9 +121,9 @@ const HouseContextProvider = ({ children }) => {
   return (
     <HouseContext.Provider
       value={{
-        country,
-        setCountry,
-        countries,
+        bathrooms,
+        setBathrooms,
+        bathRoomsNumber,
         allRoomsNumber,
         property,
         setProperty,

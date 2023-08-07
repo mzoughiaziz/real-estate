@@ -10,10 +10,10 @@ import {
 import { Menu } from '@headlessui/react';
 // import context
 import { HouseContext } from './HouseContext';
-import { BiBed } from 'react-icons/bi';
+import { BiBath } from 'react-icons/bi';
 
-const RoomsDropdown = () => {
-  const { rooms, setRooms , allRoomsNumber } = useContext(HouseContext);
+const BathroomsDropdown = () => {
+  const { bathrooms, setBathrooms , bathRoomsNumber } = useContext(HouseContext);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,12 +22,9 @@ const RoomsDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className='dropdown-btn w-full'
       >
-        <BiBed className='dropdown-icon-primary' />
+        <BiBath className='dropdown-icon-primary' />
         <div>
-          <div className='text-[15px] font-medium leading-tight'> 
-          {rooms} {rooms > 1 &&  'Bedrooms'}  {rooms == 1 &&  'Bedroom'}
-          
-          </div>
+          <div className='text-[15px] font-medium leading-tight'>   {bathrooms} {bathrooms > 1 &&  'banheiros'}  {bathrooms == 1 &&  'banheiro'}</div>
           <div className='text-[13px]'>Selecionar</div>
         </div>
         {isOpen ? (
@@ -38,15 +35,15 @@ const RoomsDropdown = () => {
       </Menu.Button>
 
       <Menu.Items className='dropdown-menu'>
-        {allRoomsNumber.map((room, index) => {
+        {bathRoomsNumber.map((bathroom, index) => {
           return (
             <Menu.Item
               as='li'
-              onClick={() => setRooms(room)}
+              onClick={() => setBathrooms(bathroom)}
               key={index}
               className='cursor-pointer hover:text-orangers transition'
             >
-              {room} {room > 1 &&  'Bedrooms'}  {room == 1 &&  'Bedroom'}
+              {bathroom} {bathroom > 1 &&  'banheiros'}  {bathroom == 1 &&  'banheiro'}
             </Menu.Item>
           );
         })}
@@ -55,4 +52,4 @@ const RoomsDropdown = () => {
   );
 };
 
-export default RoomsDropdown;
+export default BathroomsDropdown;
