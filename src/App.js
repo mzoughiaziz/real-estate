@@ -12,7 +12,7 @@ import HousesPage from './pages/HousesPage';
 import About from './pages/About';
 import { FloatingWhatsApp } from './components/FloatingWhatsapp';
 import ProjectPersonalized from './pages/ProjectPersonalized';
-import Obras from './components/Obras';
+import Obras from './pages/Obras';
 
 const App = () => {
   return (
