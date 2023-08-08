@@ -7,7 +7,7 @@
 
  /* body h1 {
 	 text-align: center;
-	 color: #428bff;
+	 color: #F16E1D;
 	 font-weight: 300;
 	 padding: 40px 0 20px 0;
 	 margin: 0;
@@ -48,7 +48,7 @@
 	 font-family: "Montserrat";
 	 font-weight: bold;
 	 font-size: 18px;
-	 color: #428bff;
+	 color: #F16E1D;
 }
  .tabs ul {
 	 list-style-type: none;
@@ -107,7 +107,7 @@
 	 max-width: 100%;
 	 margin: 0 auto;
 	 height: 4px;
-	 background: #428bff;
+	 background: #F16E1D;
 	 border-radius: 1px;
 }
  .tabs .content {
@@ -123,7 +123,7 @@
 	 line-height: 1.4;
 }
  /* .tabs .content section h2 {
-	 color: #428bff;
+	 color: #F16E1D;
 	 display: none;
 }
  .tabs .content section h2::after {
@@ -132,16 +132,16 @@
 	 display: block;
 	 width: 30px;
 	 height: 3px;
-	 background: #428bff;
+	 background: #F16E1D;
 	 margin-top: 5px;
 	 left: 1px;
 } */
  .tabs .active > label {
 	 cursor: default;
-	 color: #428bff;
+	 color: #F16E1D;
 }
  .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg {
-	 fill: #428bff;
+	 fill: #F16E1D;
 }
  @media (max-width: 600px) {
 	 .tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
@@ -156,10 +156,10 @@
 }
  .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
 	 cursor: default;
-	 color: #428bff;
+	 color: #F16E1D;
 }
  .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg {
-	 fill: #428bff;
+	 fill: #F16E1D;
 }
  @media (max-width: 600px) {
 	 .tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
@@ -174,10 +174,10 @@
 }
  .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
 	 cursor: default;
-	 color: #428bff;
+	 color: #F16E1D;
 }
  .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg {
-	 fill: #428bff;
+	 fill: #F16E1D;
 }
  @media (max-width: 600px) {
 	 .tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
@@ -192,10 +192,10 @@
 }
  .tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
 	 cursor: default;
-	 color: #428bff;
+	 color: #F16E1D;
 }
  .tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg {
-	 fill: #428bff;
+	 fill: #F16E1D;
 }
  @media (max-width: 600px) {
 	 .tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
