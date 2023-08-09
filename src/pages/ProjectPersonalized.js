@@ -1,135 +1,112 @@
 import React, { useState } from "react";
-
-const StepInput = ({ label, type, name, value, onChange }) => (
-  <>
-    <p>{label}</p>
-    <input
-      className="border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none"
-      type={type}
-      name={name}
-      placeholder={label}
-      value={value}
-      onChange={onChange}
-      min={1}
-    />
-  </>
-);
-
-const SelectInput = ({ label, options, name, value, onChange }) => (
-  <>
-    <p>{label}</p>
-    <select
-      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-      name={name}
-      value={value}
-      onChange={onChange}
-    >
-      {options.map((option) => (
-        <option key={option}>{option}</option>
-      ))}
-    </select>
-  </>
-);
-
-const RadioInput = ({ label, options, name, value, onChange }) => (
-  <>
-    <p>{label}</p>
-    {options.map((option) => (
-      <div key={option}>
-        <input
-          className="form-radio border mr-2"
-          style={{ accentColor: "#F27427" }}
-          type="radio"
-          name={name}
-          value={option}
-          checked={value === option}
-          onChange={onChange}
-        />
-        <span>{option}</span>
-      </div>
-    ))}
-  </>
-);
+import { useForm, Controller } from "react-hook-form";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 const ProjectPersonalized = () => {
-  const [formData, setFormData] = useState({
-    step1: { input1_1: "", input1_2: "", input1_3: "" },
-    step2: { input2_1: "" },
-    step3: { input3_1: "", input3_2: "" },
-    step4: { input4_1: "", input4_2: "" },
-    step5: { input5_1: "", input5_2: "", input5_3: "", input5_4: "" },
-    step6: { input6_1: "", input6_2: "", input6_3: "" },
-    step7: { input7_1: "", input7_2: "" },
-    step8: { input8_1: "" },
-  });
-
+  const {
+    handleSubmit,
+    register,
+    watch,
+    setValue,
+    formState: { errors, isSubmitting },
+  } = useForm();
+const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [`step${currentStep}`]: {
-        ...prevFormData[`step${currentStep}`],
-        [name]: value,
-      },
-    }));
-  };
+  const onSubmit = async (data) => {
+    setIsFormSubmitting(true);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Make an HTTP request to your API with the form data
-    fetch("https://realestateapi-psi.vercel.app/api/project-personalized", {
-      method: "POST",
+    const formData = new FormData();
+    formData.append("file", data.file[0]); // Access the file from form data
+
+    for (const key in data) {
+      if (key !== "file") {
+        formData.append(key, data[key]);
+      }
+    }
+
+    try {
+      const response = await axios.post('http://localhost:4003/api/project-personalized', formData, {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'multipart/form-data', // Important for file uploads
       },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success === true) {
-          console.log(data);
-          // setLocalSuccess(true);
-        } else {
-          console.log(data);
-          // setLocalError(true);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
+    });
+
+
+      if (response.data.success === true) {
+        navigate('/mabrouk')
+        // setLocalSuccess(true);
+      } else {
+        console.log(response);
         // setLocalError(true);
-      });
+      }
+    } catch (error) {
+      console.log(error);
+      // setLocalError(true);
+    } finally {
+      setIsFormSubmitting(false);
+    }
   };
+
+  const StepInput = ({ label, type, name, value, onChange }) => (
+    <>
+      <p>{label}</p>
+      <input
+        className="border border-gray-300 focus:border-orangers rounded w-full px-4 h-14 text-sm outline-none"
+        type={type}
+        name={name}
+        placeholder={label}
+        min={1}
+        {...register(name, {})}
+      />
+    </>
+  );
+
+  const SelectInput = ({ label, options, name, value, onChange }) => (
+    <>
+      <p>{label}</p>
+      <select
+        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        name={name}
+        {...register(name, {})}
+      >
+        {options.map((option) => (
+          <option key={option}>{option}</option>
+        ))}
+      </select>
+    </>
+  );
+
+  const RadioInput = ({ label, options, name, value, onChange }) => (
+    <>
+      <p>{label}</p>
+      {options.map((option) => (
+        <div key={option}>
+          <input
+            className="form-radio border mr-2"
+            style={{ accentColor: "#F27427" }}
+            type="radio"
+            name={name}
+            value={option}
+            {...register(name, {})}
+          />
+          <span>{option}</span>
+        </div>
+      ))}
+    </>
+  );
 
   const renderStepInputs = () => {
-    const stepData = formData[`step${currentStep}`];
     switch (currentStep) {
       case 1:
         return (
           <>
             <h3 className="font-semibold">Seus Dados</h3>
-            <StepInput
-              label="Nome"
-              type="text"
-              name="input1_1"
-              value={stepData.input1_1}
-              onChange={handleInputChange}
-            />
-            <StepInput
-              label="Telefone"
-              type="text"
-              name="input1_2"
-              value={stepData.input1_2}
-              onChange={handleInputChange}
-            />
-            <StepInput
-              label="E-mail"
-              type="text"
-              name="input1_3"
-              value={stepData.input1_3}
-              onChange={handleInputChange}
-            />
+            <StepInput label="Nome" type="text" name="input1_1" />
+            <StepInput label="Telefone" type="text" name="input1_2" />
+            <StepInput label="E-mail" type="text" name="input1_3" />
           </>
         );
       case 2:
@@ -140,8 +117,6 @@ const ProjectPersonalized = () => {
               label="Tipo de imóvel"
               options={["Casa térrea", "Sobrado"]}
               name="input2_1"
-              value={stepData.input2_1}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -154,16 +129,12 @@ const ProjectPersonalized = () => {
               type="number"
               min={1}
               name="input3_1"
-              value={stepData.input3_1}
-              onChange={handleInputChange}
             />
             <StepInput
               label="Quantidade de suítes"
               type="number"
               min={1}
               name="input3_2"
-              value={stepData.input3_2}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -177,16 +148,12 @@ const ProjectPersonalized = () => {
               type="number"
               min={1}
               name="input4_1"
-              value={stepData.input4_1}
-              onChange={handleInputChange}
             />
             <StepInput
               label="Quantidade de lavabos"
               type="number"
               min={1}
               name="input4_2"
-              value={stepData.input4_2}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -198,30 +165,22 @@ const ProjectPersonalized = () => {
               label="Garagem coberta?"
               options={["sim", "não"]}
               name="input5_1"
-              value={stepData.input5_1}
-              onChange={handleInputChange}
             />
             <StepInput
               label="Quantos carros na garagem?"
               type="number"
               min={1}
               name="input5_2"
-              value={stepData.input5_2}
-              onChange={handleInputChange}
             />
             <RadioInput
               label="Área de lazer com espaço gourmet e churrasqueira?"
               options={["sim", "não"]}
               name="input5_3"
-              value={stepData.input5_3}
-              onChange={handleInputChange}
             />
             <RadioInput
               label="Piscina na área de lazer?"
               options={["sim", "não"]}
               name="input5_4"
-              value={stepData.input5_4}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -233,15 +192,11 @@ const ProjectPersonalized = () => {
               label="Ambientes separados ou modelo americano?"
               options={["separados", "modelo americano"]}
               name="input6_1"
-              value={stepData.input6_1}
-              onChange={handleInputChange}
             />
             <RadioInput
               label="Cozinha e sala de jantar e TV integrados ou separados?"
               options={["integrados", "separados"]}
               name="input6_2"
-              value={stepData.input6_2}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -258,15 +213,11 @@ const ProjectPersonalized = () => {
                 "pretendo comprar a vista ou financiar",
               ]}
               name="input7_1"
-              value={stepData.input7_1}
-              onChange={handleInputChange}
             />
             <RadioInput
               label="A obra será financiada?"
               options={["sim", "não"]}
               name="input7_2"
-              value={stepData.input7_2}
-              onChange={handleInputChange}
             />
           </>
         );
@@ -279,19 +230,18 @@ const ProjectPersonalized = () => {
             <textarea
               className="border border-gray-300 focus:border-orangers rounded w-full px-4 text-sm outline-none"
               name="input8_1"
-              value={stepData.input8_1}
-              onChange={handleInputChange}
               rows={8}
+              {...register("notes", {})}
             ></textarea>
 
-            <div class="flex items-center justify-center w-full">
+            <div className="flex items-center justify-center w-full">
               <label
-                for="dropzone-file"
-                class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                htmlFor="dropzone-file"
+                className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
               >
-                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
-                    class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                    className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -299,21 +249,27 @@ const ProjectPersonalized = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                     />
                   </svg>
-                  <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                    <span class="font-semibold">Click to upload</span> or drag
-                    and drop
+                  <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                    <span className="font-semibold">Click to upload</span> or
+                    drag and drop
                   </p>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
-                <input id="dropzone-file" type="file" class="hidden" />
+                <input
+                  id="dropzone-file"
+                  type="file"
+                  name="file"
+                  {...register("file", {})}
+                  className="hidden"
+                />
               </label>
             </div>
           </>
@@ -344,40 +300,46 @@ const ProjectPersonalized = () => {
         </p>
         {/* {renderStep()} */}
         <div className="flex-1 w-full mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8">
-          <form className="flex flex-col gap-y-4">
+          <form
+            className="flex flex-col gap-y-4"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             {renderStepInputs()}
-
-            <div className="flex gap-x-2 relative">
-              {currentStep >= 2 && (
-                <button
-                  className="bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm absolute left-0 transition"
-                  onClick={() => setCurrentStep(currentStep - 1)}
-                  type="button"
-                >
-                  Previous
-                </button>
-              )}
-              {currentStep <= 7 ? (
+            {/* Submit Button */}
+            {currentStep === 8 && (
+              <div className="flex gap-x-2 relative">
                 <button
                   className="bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm absolute right-0 transition"
-                  onClick={() => setCurrentStep(currentStep + 1)}
-                  // disabled={nextButtonDisabled}
-                  type="button"
-                >
-                  Next
-                </button>
-              ) : (
-                <button
-                  className="bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm absolute right-0 transition"
-                  onClick={handleSubmit}
-                  // disabled={nextButtonDisabled}
-                  type="button"
+                  type="submit"
+                  disabled={isFormSubmitting}
                 >
                   Submit
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </form>
+
+          {/* Next and Previous Buttons */}
+          <div className="flex gap-x-2 relative">
+            {currentStep >= 2 && (
+              <button
+                className="bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm absolute left-0 transition"
+                onClick={() => setCurrentStep(currentStep - 1)}
+                type="button"
+              >
+                Previous
+              </button>
+            )}
+            {currentStep < 8 && (
+              <button
+                className="bg-orangers hover:bg-orange-400 text-white rounded p-4 text-sm absolute right-0 transition"
+                onClick={() => setCurrentStep(currentStep + 1)}
+                type="button"
+              >
+                Next
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

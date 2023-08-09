@@ -13,6 +13,8 @@ import About from './pages/About';
 import { FloatingWhatsApp } from './components/FloatingWhatsapp';
 import ProjectPersonalized from './pages/ProjectPersonalized';
 import Obras from './pages/Obras';
+import CongratsPage from './pages/CongratsPage';
+
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
         <Route path='/projeto-personalizado' element={<ProjectPersonalized />} />
         <Route path='/obras-em-andamento' element={<Obras />} />
         <Route path='/sobrenos' element={<About />} />
+        <Route path='/mabrouk' element={<CongratsPage />} />
+
       </Routes>
       <Footer />
       <FloatingWhatsApp
