@@ -32,7 +32,7 @@ const PropertyDetails = () => {
         </div> */}
       </div>
       <div className="flex flex-col items-start gap-8 lg:flex-row">
-        <div className="max-w-[768px]">
+        <div className="slider-width">
           <Carousel
             autoPlay
             showThumbs={true}
@@ -40,34 +40,34 @@ const PropertyDetails = () => {
             showIndicators={true}
           >
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
             <div>
-              <img src={property.imageLg} />
+              <img src={property.imageLg}  />
             </div>
           </Carousel>
           <div className="flex gap-x-6 text-orangers mb-6">
