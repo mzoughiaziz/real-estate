@@ -18,9 +18,9 @@ const GabiCasa = ({ activeTab }) => {
           <h2 className="text-4xl lg:text-[58px] font-semibold leading-none mb-6">
             Casa da Gabi
           </h2>
-          <div class="progress">
+          {/* <div class="progress">
             <div class="progress-value"></div>
-          </div>
+          </div> */}
           <p className="max-w-[580px] mb-8">
             Nossa jornada com a querida cliente Gabi começou com um sonho. Desde
             o primeiro encontro, buscamos entender suas necessidades,

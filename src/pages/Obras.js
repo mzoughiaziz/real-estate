@@ -13,7 +13,7 @@ const Obras = () => {
   return (
     <>
       <div className="tabs h-full max-h-[1840px] mb-8 xl:mb-24">
-        <ul>
+        {/* <ul>
           <li
             title="Gabi's house"
             className={activeTab === 1 ? "active" : ""}
@@ -42,7 +42,7 @@ const Obras = () => {
           >
             <label>4th content</label>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="slider">
           <div
